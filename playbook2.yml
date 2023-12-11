@@ -1,0 +1,7 @@
+---
+- name: Create script
+  hosts: all
+  become: true
+  tasks: 
+     - name: Creation of a script
+       script: asign2.sh

@@ -1,0 +1,14 @@
+---
+- name: Install java 
+  hosts: slave1
+  become: true
+  tasks:
+    - name: Install openJDK 11
+      apt: name=openjdk-11-jdk update-cache=yes state=latest
+
+- name: Install mysql 
+  hosts: slave2
+  become: true
+  tasks:
+    - name: Install mysql
+      apt: name=mysql-server update-cache=yes state=latest
